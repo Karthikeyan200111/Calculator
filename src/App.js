@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Display from "./Display";
 import KeyBoard from "./KeyBoard";
+import { evaluate } from 'mathjs';
 
 const calcData = [
   { id: "clear", value: "AC" },
@@ -128,15 +129,16 @@ function App() {
   };
 
   const handleSubmit = () => {
-    const total = eval(calculatorData);
+    const total = evaluate(calculatorData);
     setInput(total);
     setOutput(total);
     setCalculatorData(total);
   };
-  const handleOutput = () => {
-    setOutput(calculatorData);
-  };
+  
   useEffect(() => {
+    const handleOutput = () => {
+      setOutput(calculatorData);
+    };
     handleOutput();
   }, [calculatorData]);
 
