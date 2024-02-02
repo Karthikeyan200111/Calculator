@@ -1,7 +1,8 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+*{
+  font-family: 'Poppins', sans-serif;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +36,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+.keys button:first-child {
+
+  grid-column-end: 3;
+  grid-column-start: 1;
+  
+}
+.keys button:nth-child(15) {
+ 
+  grid-row: 4 / 6;
+  grid-column: 4 / 4;
+  
+  
+}
+.keys button:nth-child(1),
+.keys button:nth-child(2),
+.keys button:nth-child(3),
+.keys button:nth-child(7),
+.keys button:nth-child(11),
+.keys button:nth-child(15){
+  background-color: rgb(240, 176, 59);
+}
+
+.keys button:nth-child(16) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+ 
+}
+.title{
+  background-color: rgb(240, 176, 59);
 }
